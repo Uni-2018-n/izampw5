@@ -27,7 +27,7 @@ abstract public class PlaneComponent {
 	abstract public boolean ready_check();
 }
 
-class PassengerCompartment extends PlaneComponent{ //TODO do this
+class PassengerCompartment extends PlaneComponent{
 	private PassengerCompartment Sub_PassCompartment;
 	private boolean SecWorker;
 	private boolean CleanWorker;
@@ -36,7 +36,7 @@ class PassengerCompartment extends PlaneComponent{ //TODO do this
 		SecWorker = false;
 		CleanWorker = false;
 		System.out.println("PassengerCompartment created");
-		if(((int)Math.random() % 3) == 0) { //TODO fix this
+		if((MainClass.rnd.nextInt() % 3) == 0) { //TODO fix this
 			System.out.println("Sub PassengerCompartment about to be created:");
 			Sub_PassCompartment = new PassengerCompartment();
 		}else {
@@ -219,8 +219,8 @@ class EquipmentCompartment extends PrivateCompartment{
 		EquipmentCompartment temp = new EquipmentCompartment();
 		temp.SecWorker = SecWorker;
 		temp.MaintWorker = MaintWorker;
-		temp.super.SecWorker = super.SecWorker; //TODO fix this
-		temp.super.MaintWorker = super.CleanWorker; //TODO fix this
+		((PrivateCompartment)temp).SecWorker = super.SecWorker; 
+		((PrivateCompartment)temp).CleanWorker = super.CleanWorker;
 		return temp;
 	}
 	
@@ -343,8 +343,8 @@ class CargoBay extends PrivateCompartment{
 		temp.CleanWorker = CleanWorker;
 		temp.MaintWorker = MaintWorker;
 		temp.equipment_space = equipment_space.clone();
-		temp.super.SecWorker = super.SecWorker;
-		temp.super.CleanWorker = super.CleanWorker;
+		((PrivateCompartment)temp).SecWorker = super.SecWorker;
+		((PrivateCompartment)temp).CleanWorker = super.CleanWorker;
 		return temp;
 	}
 	
