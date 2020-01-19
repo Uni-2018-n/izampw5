@@ -97,7 +97,7 @@ class PassengerCompartment extends PlaneComponent{
 	public final boolean ready_check() {
 		if(SecWorker & CleanWorker) {
 			System.out.println("PassengerCompartment OK!");
-			System.out.print(toString());
+			System.out.println(toString());
 			if(Sub_PassCompartment != null) {
 				System.out.print("Sub: ");
 				if(!(Sub_PassCompartment.ready_check())) {
@@ -141,10 +141,12 @@ abstract class PrivateCompartment extends PlaneComponent{
 	}
 	
 	public void process(SecurityEmployee worker) {
+		System.out.println("I SecurityEmployee started working into a privateCompartment");
 		SecWorker = true;
 	}
 	
 	public void process(CleaningEmployee worker) {
+		System.out.println("I CleaningEmployee started working into a privateCompartment");
 		CleanWorker = true;
 	}
 	
@@ -329,7 +331,7 @@ class CargoBay extends PrivateCompartment{
 			if(equipment_space.ready_check()) {
 				if(SecWorker && CleanWorker && MaintWorker) {
 					System.out.println("CargoBay OK!");
-					System.out.print(toString());
+					System.out.println(toString());
 					return true;
 				}
 			}
@@ -349,25 +351,3 @@ class CargoBay extends PrivateCompartment{
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

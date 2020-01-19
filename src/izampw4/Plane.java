@@ -90,16 +90,16 @@ public class Plane {
 			worker.report(cargo);
 		}
 		if(!e1.ready_check()) {
-			worker.workOn(e1);
-			worker.report(e1);
+			worker.workOn((PrivateCompartment)e1);
+			worker.report((PrivateCompartment)e1);
 		}
 		if(!e2.ready_check()) {
-			worker.workOn(e2);
-			worker.report(e2);
+			worker.workOn((PrivateCompartment)e2);
+			worker.report((PrivateCompartment)e2);
 		}
 		if(!e3.ready_check()) {
-			worker.workOn(e3);
-			worker.report(e3);
+			worker.workOn((PrivateCompartment)e3);
+			worker.report((PrivateCompartment)e3);
 		}
 		for(int i=0;i<size_PassComp;i++) {
 			if(!pl_PassComp[i].ready_check()) {
@@ -172,20 +172,3 @@ public class Plane {
 		return temp;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
