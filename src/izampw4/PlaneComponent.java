@@ -1,6 +1,6 @@
 package izampw4;
 
-abstract public class PlaneComponent {
+abstract public class PlaneComponent extends Object{
 	public PlaneComponent() {
 		System.out.println("PlaneComponent created");
 	}
