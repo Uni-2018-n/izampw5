@@ -1,4 +1,4 @@
-package izampw4;
+// package izampw4;
 
 abstract public class Employee extends Object{
 	protected String name;
@@ -8,30 +8,30 @@ abstract public class Employee extends Object{
 	}
 
 	public void workOn(CargoBay work_place) { //pure virtual
-		
+
 	}
-	
+
 	public void workOn(EquipmentCompartment work_place) {//pure virtual
-		
+
 	}
 
 	public void workOn(PassengerCompartment work_place) {//pure virtual
-		
+
 	}
-	
+
 	public void report(CargoBay work_place) {//pure virtual
-		
+
 	}
-	
+
 	public void report(EquipmentCompartment work_place) {//pure virtual
-		
+
 	}
 
 	public void report(PassengerCompartment work_place) {//pure virtual
-		
+
 	}
-	
-	
+
+
 
 	public boolean equal(final Employee sec){// virtual
 		if(name == sec.name) {
@@ -59,7 +59,7 @@ class SecurityEmployee extends Employee{
 		System.out.println("I SecurityEmployee, started working into a Cargo Bay");
 		work_place.process(this);
 	}
-	
+
 	public final void workOn(EquipmentCompartment work_place) {
 		System.out.println("I SecurityEmployee, started working into a Equipment Compartment");
 		work_place.process(this);
@@ -69,11 +69,11 @@ class SecurityEmployee extends Employee{
 		System.out.println("I SecurityEmployee, started working into a Passenger Compartment");
 		work_place.process(this);
 	}
-	
+
 	public final void report(CargoBay work_place) {
 		System.out.println("SecurityEmployee keep working on CargoBay");
 	}
-	
+
 	public final void report(EquipmentCompartment work_place) {
 		System.out.println("SecurityEmployee keep working on EquipmentCompartment");
 	}
@@ -107,16 +107,16 @@ class MaintenanceEmployee extends Employee{
 		System.out.println("I MaintenanceEmployee, started working into a Cargo Bay");
 		work_place.process(this);
 	}
-	
+
 	public final void workOn(EquipmentCompartment work_place) {
 		System.out.println("I MaintenanceEmployee, started working into a Equipment Compartment");
 		work_place.process(this);
 	}
-	
+
 	public final void report(CargoBay work_place) {
 		System.out.println("MaintenanceEmployee keep working on CargoBay");
 	}
-	
+
 	public final void report(EquipmentCompartment work_place) {
 		System.out.println("MaintenanceEmployee keep working on EquipmentCompartment");
 	}
@@ -146,7 +146,7 @@ class CleaningEmployee extends Employee{
 		System.out.println("I CleaningEmployee, started working into a Cargo Bay");
 		work_place.process(this);
 	}
-	
+
 	public final void workOn(PrivateCompartment work_place) {
 		System.out.println("I CleaningEmployee, started working into a Private Compartment");
 		work_place.process(this);
@@ -156,11 +156,11 @@ class CleaningEmployee extends Employee{
 		System.out.println("I CleaningEmployee, started working into a Passenger Compartment");
 		work_place.process(this);
 	}
-	
+
 	public final void report(CargoBay work_place) {
 		System.out.println("CleaningEmployee keep working on CargoBay");
 	}
-	
+
 	public final void report(PrivateCompartment work_place) {
 		System.out.println("CleaningEmployee keep working on Private compartment");
 	}

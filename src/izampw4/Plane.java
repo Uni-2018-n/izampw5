@@ -1,4 +1,4 @@
-package izampw4;
+// package izampw4;
 
 public class Plane extends Object{
 	private String title;
@@ -9,7 +9,7 @@ public class Plane extends Object{
 	private EquipmentCompartment e2;
 	private EquipmentCompartment e3;
 	private PassengerCompartment[] pl_PassComp;
-	
+
 	public Plane(final String titl, final int ma_pl) {//TODO insert ma_pl=40;
 		max_pl= ma_pl;
 		System.out.println("Plane just created!");
@@ -22,7 +22,7 @@ public class Plane extends Object{
 		System.out.println("E2 DONE");
 		e3 = new EquipmentCompartment();
 		System.out.println("E3 DONE");
-		
+
 		double temp= max_pl/75.0;
 		if(temp == (int)temp) {
 			size_PassComp = (int)temp;
@@ -33,13 +33,13 @@ public class Plane extends Object{
 		for(int i=0;i<size_PassComp;i++) {
 			pl_PassComp[i] = new PassengerCompartment();
 		}
-		
+
 	}
-	
+
 	public Plane() {
 		System.out.println("Plane just created");
 	}
-	
+
 	public final void process(SecurityEmployee worker) {
 		if(!cargo.ready_check()) {
 			worker.workOn(cargo);
@@ -64,7 +64,7 @@ public class Plane extends Object{
 			}
 		}
 	}
-	
+
 	public final void process(MaintenanceEmployee worker) {
 		if(!cargo.ready_check()) {
 			worker.workOn(cargo);
@@ -83,7 +83,7 @@ public class Plane extends Object{
 			worker.report(e3);
 		}
 	}
-	
+
 	public final void process(CleaningEmployee worker) {
 		if(!cargo.ready_check()) {
 			worker.workOn(cargo);
@@ -108,7 +108,7 @@ public class Plane extends Object{
 			}
 		}
 	}
-	
+
 	public final boolean equal(final Plane sec) {
 		if(title == sec.title && max_pl == sec.max_pl) {
 			if(cargo.equal(sec.cargo)) {
@@ -124,7 +124,7 @@ public class Plane extends Object{
 		}
 		return false;
 	}
-	
+
 	public final boolean ready_check() {
 		if(!cargo.ready_check()) {
 			return false;
@@ -145,7 +145,7 @@ public class Plane extends Object{
 		}
 		return true;
 	}
-	
+
 	public final String toString() {
 		String temp = "Plane, title= " + title + ", max_pl= " + Integer.toString(max_pl) + ", " +
 		"Parts: \n" +
@@ -155,7 +155,7 @@ public class Plane extends Object{
 		}
 		return temp;
 	}
-	
+
 	public final Plane clone() {
 		Plane temp = new Plane();
 		temp.title = title;
