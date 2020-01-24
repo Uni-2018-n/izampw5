@@ -1,5 +1,3 @@
-// package izampw4;
-
 import java.util.Random;
 
 abstract public class PlaneComponent extends Object{

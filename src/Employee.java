@@ -1,5 +1,3 @@
-// package izampw4;
-
 abstract public class Employee extends Object{
 	protected String name;
 

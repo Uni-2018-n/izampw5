@@ -1,5 +1,3 @@
-// package izampw4;
-
 public class MainClass {
 	public static void main(String[] args) {
 		Plane my_plane= new Plane("Zephyr One", 200);

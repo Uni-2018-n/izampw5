@@ -1,5 +1,3 @@
-// package izampw4;
-
 final public class Plane extends Object{
 	private String title;
 	private int max_pl;
