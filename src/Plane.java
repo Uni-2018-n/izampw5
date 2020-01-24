@@ -1,6 +1,6 @@
 // package izampw4;
 
-public class Plane extends Object{
+final public class Plane extends Object{
 	private String title;
 	private int max_pl;
 	private int size_PassComp;

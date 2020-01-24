@@ -1,10 +1,6 @@
 // package izampw4;
 
-import java.util.Random;
-
-
 public class MainClass {
-	public static Random rnd = new Random(System.currentTimeMillis());
 	public static void main(String[] args) {
 		Plane my_plane= new Plane("Zephyr One", 200);
 		System.out.println("PLANE CONSTRUCTOR DONE\n");

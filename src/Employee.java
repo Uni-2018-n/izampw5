@@ -49,7 +49,7 @@ abstract public class Employee extends Object{
 	}
 }
 
-class SecurityEmployee extends Employee{
+final class SecurityEmployee extends Employee{
 	public SecurityEmployee(String nam){
 		name = nam;
 		System.out.println("SecurityEmployee just created");
@@ -92,12 +92,12 @@ class SecurityEmployee extends Employee{
 	}
 
 
-	public String toString() {
+	public final String toString() {
 		return super.toString() + "SecurityEmployee";
 	}
 }
 
-class MaintenanceEmployee extends Employee{
+final class MaintenanceEmployee extends Employee{
 	public MaintenanceEmployee(String nam){
 		name = nam;
 		System.out.println("MaintenanceEmployee created");
@@ -136,7 +136,7 @@ class MaintenanceEmployee extends Employee{
 	}
 }
 
-class CleaningEmployee extends Employee{
+final class CleaningEmployee extends Employee{
 	public CleaningEmployee(String nam){
 		name = nam;
 		System.out.println("CleaningEmployee created");
@@ -173,13 +173,12 @@ class CleaningEmployee extends Employee{
 		return super.equal(sec);
 	}
 
-	public CleaningEmployee clone() {
+	public final CleaningEmployee clone() {
 		CleaningEmployee temp=new CleaningEmployee(name);
 		return temp;
 	}
 
-
-	public String toString() {
+	public final String toString() {
 		return super.toString() + "CleaningEmployee";
 	}
 }
