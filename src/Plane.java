@@ -31,7 +31,6 @@ final public class Plane extends Object{
 		for(int i=0;i<size_PassComp;i++){
 			pl_PassComp[i] = new PassengerCompartment();
 		}
-
 	}
 
 	public Plane(final String titl){//constructor with default value for the max_pl
@@ -57,7 +56,6 @@ final public class Plane extends Object{
 		for(int i=0;i<size_PassComp;i++){
 			pl_PassComp[i] = new PassengerCompartment();
 		}
-
 	}
 
 	public Plane(){//constructor for clone(no initialization needed)

@@ -29,8 +29,6 @@ abstract public class Employee extends Object{
 
 	}
 
-
-
 	public boolean equal(final Employee sec){// virtual
 		if(name == sec.name){
 			return true;
@@ -41,6 +39,8 @@ abstract public class Employee extends Object{
 	public  String toString(){ //virtual
 		return "Employee, " + name + " , ";
 	}
+
+	abstract public Employee clone();
 
 	public final String get_name(){
 		return name;
@@ -89,7 +89,6 @@ final class SecurityEmployee extends Employee{
 		return temp;
 	}
 
-
 	public final String toString(){
 		return super.toString() + "SecurityEmployee";
 	}
@@ -127,7 +126,6 @@ final class MaintenanceEmployee extends Employee{
 		MaintenanceEmployee temp=new MaintenanceEmployee(name);
 		return temp;
 	}
-
 
 	public final String toString(){
 		return super.toString() + "MaintenanceEmployee";

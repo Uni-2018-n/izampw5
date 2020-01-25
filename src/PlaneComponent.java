@@ -249,7 +249,6 @@ final class EquipmentCompartment extends PrivateCompartment{
 		}else{
 			temp = temp + "Need MaintenanceEmployee to work here. ";
 		}
-
 		return temp;
 	}
 }
@@ -296,7 +295,6 @@ final class CargoBay extends PrivateCompartment{
 					return true;
 				}
 			}
-
 		}
 		return false;
 	}
@@ -348,5 +346,4 @@ final class CargoBay extends PrivateCompartment{
 		((PrivateCompartment)temp).CleanWorker = super.CleanWorker;
 		return temp;
 	}
-
 }
