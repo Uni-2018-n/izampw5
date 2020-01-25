@@ -1,5 +1,5 @@
-public class MainClass {
-	public static void main(String[] args) {
+public class MainClass{
+	public static void main(String[] args){
 		Plane my_plane= new Plane("Zephyr One", 200);
 		System.out.println("PLANE CONSTRUCTOR DONE\n");
 
@@ -20,11 +20,11 @@ public class MainClass {
 
 		System.out.println("PROCESS DONE\n");
 
-		if(my_plane.ready_check()) {
+		if(my_plane.ready_check()){
 			System.out.println("\n PLANE TOSTRING: ");
 			System.out.println(my_plane.toString());
 			System.out.println("Plane ready to take off!!");
-		}else {
+		}else{
 			System.out.println("Plane not ready ERROR ERROR COLLISION COLLISION");
 		}
 
@@ -33,9 +33,9 @@ public class MainClass {
 
 		System.out.println("test_plane::toString: ");
 		System.out.println(test_plane.toString());
-		if(test_plane.equal(my_plane)) {
+		if(test_plane.equal(my_plane)){
 			System.out.println("PLANES ARE EQUAL");
-		}else {
+		}else{
 			System.out.println("PLANES AINT EQUAL");
 		}
 		System.out.println("</CLONE>");
